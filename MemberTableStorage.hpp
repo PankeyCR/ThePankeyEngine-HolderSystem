@@ -5,7 +5,7 @@
 	#include "TableStorage.hpp"
 	#include "Member.hpp"
 
-	#if defined(pankey_Log) && (defined(MemberTableStorage_Log) || defined(pankey_Global_Log) || defined(pankey_MemoryManager_Log))
+	#if defined(pankey_Log) && (defined(MemberTableStorage_Log) || defined(pankey_Global_Log) || defined(pankey_HolderSystem_Log))
 		#include "Logger_status.hpp"
 		#define MemberTableStorageLog(status,method,mns) pankey_Log(status,"MemberTableStorage",method,mns)
 	#else
@@ -14,23 +14,27 @@
 
 	namespace pankey{
 
-		template<class H, class M>
-		class MemberTableStorage : virtual public TableStorage<H>{
-			public:
+		namespace HolderSystem{
 
-                using MANAGER_TYPE = typename MemoryStorage<H>::MANAGER_TYPE;
-                using HOLDER_TYPE = typename MemoryStorage<H>::HOLDER_TYPE;
+			template<class H, class M>
+			class MemberTableStorage : virtual public TableStorage<H>{
+				public:
 
-				virtual ~MemberTableStorage(){
-					MemberTableStorageLog(pankey_Log_StartMethod, "Destructor", "");
-					MemberTableStorageLog(pankey_Log_EndMethod, "Destructor", "");
-				}
-				
-				virtual Member<H,M> get(int a_position)const=0;
+					using MANAGER_TYPE = typename MemoryStorage<H>::MANAGER_TYPE;
+					using HOLDER_TYPE = typename MemoryStorage<H>::HOLDER_TYPE;
 
-				virtual Member<H,M> removeByIndex(int a_position)=0;
-				
-		};
+					virtual ~MemberTableStorage(){
+						MemberTableStorageLog(pankey_Log_StartMethod, "Destructor", "");
+						MemberTableStorageLog(pankey_Log_EndMethod, "Destructor", "");
+					}
+					
+					virtual Member<H,M> get(int a_position)const=0;
+
+					virtual Member<H,M> removeByIndex(int a_position)=0;
+					
+			};
+
+		}
 
 	}
 

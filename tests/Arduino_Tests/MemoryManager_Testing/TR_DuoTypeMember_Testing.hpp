@@ -2,7 +2,7 @@
 #ifndef TR_DuoTypeMember_Testing_hpp
 	#define TR_DuoTypeMember_Testing_hpp
 	
-	#include "pankey_MemoryManager.hpp"
+	#include "pankey_HolderSystem.hpp"
 
 	#include "TestResult.hpp"
 	#include "TestRunner.hpp"
@@ -12,112 +12,116 @@
 
 	namespace pankey{
 
-		TestResult TR_DuoTypeMember_Testing_1(){
-			TestResult result;
+		namespace HolderSystem{
 
-			duo_type<int,int> i_duo;
+			Base::TestResult TR_DuoTypeMember_Testing_1(){
+				Base::TestResult result;
 
-			result.assertNotNull("manager shouldnt be null", i_duo.getManager());
+				duo_type<int,int> i_duo;
 
-			result.assertTrue("holder has to be null", i_duo.isHolderNull());
-			result.assertTrue("holder has to be null", i_duo.isDuoTypeHolderNull());
+				result.assertNotNull("manager shouldnt be null", i_duo.getManager());
 
-			result.assertTrue("pointer has to be null", i_duo.isMemoryNull());
-			result.assertTrue("pointer has to be null", i_duo.isDuoTypeMemoryNull());
+				result.assertTrue("holder has to be null", i_duo.isHolderNull());
+				result.assertTrue("holder has to be null", i_duo.isDuoTypeHolderNull());
 
-			result.assertTrue("pointers has to be null", i_duo.isNull());
-			return result;
-		}
-		
-		TestResult TR_DuoTypeMember_Testing_2(){
-			TestResult i_result;
+				result.assertTrue("pointer has to be null", i_duo.isMemoryNull());
+				result.assertTrue("pointer has to be null", i_duo.isDuoTypeMemoryNull());
 
-			var i_var_0 = 15;
-			var i_var_1 = 20;
+				result.assertTrue("pointers has to be null", i_duo.isNull());
+				return result;
+			}
+			
+			Base::TestResult TR_DuoTypeMember_Testing_2(){
+				Base::TestResult i_result;
 
-			duo_type<int,int> i_duo;
+				var i_var_0 = 15;
+				var i_var_1 = 20;
 
-			i_duo.copyMember(i_var_0);
-			i_duo.copyDuoTypeMember(i_var_1);
+				duo_type<int,int> i_duo;
 
-			i_result.assertTrue("holder shouldnt be null", !i_duo.isHolderNull());
-			i_result.assertTrue("holder shouldnt be null", !i_duo.isDuoTypeHolderNull());
+				i_duo.copyMember(i_var_0);
+				i_duo.copyDuoTypeMember(i_var_1);
 
-			i_result.assertTrue("holder shouldnt be null", !i_duo.isMemoryNull());
-			i_result.assertTrue("holder shouldnt be null", !i_duo.isDuoTypeMemoryNull());
+				i_result.assertTrue("holder shouldnt be null", !i_duo.isHolderNull());
+				i_result.assertTrue("holder shouldnt be null", !i_duo.isDuoTypeHolderNull());
 
-			i_result.assertTrue("pointer shouldnt be null", !i_duo.isNull());
+				i_result.assertTrue("holder shouldnt be null", !i_duo.isMemoryNull());
+				i_result.assertTrue("holder shouldnt be null", !i_duo.isDuoTypeMemoryNull());
 
-			return i_result;
-		}
-		
-		TestResult TR_DuoTypeMember_Testing_3(){
-			TestResult i_result;
+				i_result.assertTrue("pointer shouldnt be null", !i_duo.isNull());
 
-			var i_var_0 = 15.4f;
-			var i_var_1 = 20.4f;
+				return i_result;
+			}
+			
+			Base::TestResult TR_DuoTypeMember_Testing_3(){
+				Base::TestResult i_result;
 
-			duo_type<int,int> i_duo;
+				var i_var_0 = 15.4f;
+				var i_var_1 = 20.4f;
 
-			i_duo.copyMember(i_var_0);
-			i_duo.copyDuoTypeMember(i_var_1);
+				duo_type<int,int> i_duo;
 
-			i_result.assertTrue("holder shouldnt be null", i_duo.isHolderNull());
-			i_result.assertTrue("holder shouldnt be null", i_duo.isDuoTypeHolderNull());
+				i_duo.copyMember(i_var_0);
+				i_duo.copyDuoTypeMember(i_var_1);
 
-			i_result.assertTrue("holder shouldnt be null", i_duo.isMemoryNull());
-			i_result.assertTrue("holder shouldnt be null", i_duo.isDuoTypeMemoryNull());
+				i_result.assertTrue("holder shouldnt be null", i_duo.isHolderNull());
+				i_result.assertTrue("holder shouldnt be null", i_duo.isDuoTypeHolderNull());
 
-			i_result.assertTrue("pointer shouldnt be null", i_duo.isNull());
-			return i_result;
-		}
-		
-		TestResult TR_DuoTypeMember_Testing_4(){
-			TestResult result;
+				i_result.assertTrue("holder shouldnt be null", i_duo.isMemoryNull());
+				i_result.assertTrue("holder shouldnt be null", i_duo.isDuoTypeMemoryNull());
 
-			var i_var_0 = 15;
-			var i_var_1 = 20;
+				i_result.assertTrue("pointer shouldnt be null", i_duo.isNull());
+				return i_result;
+			}
+			
+			Base::TestResult TR_DuoTypeMember_Testing_4(){
+				Base::TestResult result;
 
-			duo_type<int,int> i_duo;
+				var i_var_0 = 15;
+				var i_var_1 = 20;
 
-			i_duo.copyMember(i_var_0);
-			i_duo.copyDuoTypeMember(i_var_1);
+				duo_type<int,int> i_duo;
 
-			var i_var_00 = i_duo.getMember();
-			var i_var_11 = i_duo.getDuoTypeMember();
+				i_duo.copyMember(i_var_0);
+				i_duo.copyDuoTypeMember(i_var_1);
 
-			result.assertEqual("value should be: 15", i_var_00.getValue<int>(), 15);
-			result.assertEqual("value should be: 20", i_var_11.getValue<int>(), 20);
+				var i_var_00 = i_duo.getMember();
+				var i_var_11 = i_duo.getDuoTypeMember();
 
-			return result;
-		}
-		
-		TestResult TR_DuoTypeMember_Testing_5(){
-			TestResult i_result;
+				result.assertEqual("value should be: 15", i_var_00.getValue<int>(), 15);
+				result.assertEqual("value should be: 20", i_var_11.getValue<int>(), 20);
 
-			var i_var_0 = 15;
-			var i_var_1 = 20;
+				return result;
+			}
+			
+			Base::TestResult TR_DuoTypeMember_Testing_5(){
+				Base::TestResult i_result;
 
-			duo_type<int,int> i_duo = duo_type<int,int>(i_var_0, i_var_1);
+				var i_var_0 = 15;
+				var i_var_1 = 20;
 
-			var i_var_00 = i_duo.getMember();
-			var i_var_11 = i_duo.getDuoTypeMember();
+				duo_type<int,int> i_duo = duo_type<int,int>(i_var_0, i_var_1);
 
-			i_result.assertEqual("value should be: 15", i_var_00.getValue<int>(), 15);
-			i_result.assertEqual("value should be: 20", i_var_11.getValue<int>(), 20);
+				var i_var_00 = i_duo.getMember();
+				var i_var_11 = i_duo.getDuoTypeMember();
 
-			return i_result;
-		}
-		
-		void TR_DuoTypeMember_Testing(TestRunner& a_test_runner){
-			createMemoryManager();
+				i_result.assertEqual("value should be: 15", i_var_00.getValue<int>(), 15);
+				i_result.assertEqual("value should be: 20", i_var_11.getValue<int>(), 20);
 
-			a_test_runner.add("duo_type Constructor", TR_DuoTypeMember_Testing_1);
-			a_test_runner.add("duo_type copyMember, copyDuoMember", TR_DuoTypeMember_Testing_2);
-			a_test_runner.add("duo_type copyMember, copyDuoMember, for non type", TR_DuoTypeMember_Testing_3);
-			a_test_runner.add("duo_type getMember, getDuoMember", TR_DuoTypeMember_Testing_4);
-			a_test_runner.add("duo_type Constructor with both Members", TR_DuoTypeMember_Testing_5);
-		}		
+				return i_result;
+			}
+			
+			void TR_DuoTypeMember_Testing(Base::TestRunner& a_test_runner){
+				createMemoryManager();
+
+				a_test_runner.add("duo_type Constructor", TR_DuoTypeMember_Testing_1);
+				a_test_runner.add("duo_type copyMember, copyDuoMember", TR_DuoTypeMember_Testing_2);
+				a_test_runner.add("duo_type copyMember, copyDuoMember, for non type", TR_DuoTypeMember_Testing_3);
+				a_test_runner.add("duo_type getMember, getDuoMember", TR_DuoTypeMember_Testing_4);
+				a_test_runner.add("duo_type Constructor with both Members", TR_DuoTypeMember_Testing_5);
+			}		
+
+		}	
 
 	}
 

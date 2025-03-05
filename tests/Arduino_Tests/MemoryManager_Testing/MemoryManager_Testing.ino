@@ -23,7 +23,8 @@
 #include "TR_Value_Testing.hpp"
 #include "TR_Variable_Testing.hpp"
 
-using namespace pankey;
+using namespace pankey::Base;
+using namespace pankey::HolderSystem;
 
 void Start(){
   Serial.println("Start Test");
