@@ -1,13 +1,8 @@
 
-//#include "arduino_logger.hpp"
-
-//#define TestRunner_Log
-
 #include "TestRunner.hpp"
 
 #include "TR_DuoMember_Testing.hpp"
 #include "TR_DuoTypeMember_Testing.hpp"
-#include "TR_Function_Testing.hpp"
 #include "TR_InvokeCommandList_Testing.hpp"
 #include "TR_InvokeCommandMap_Testing.hpp"
 #include "TR_InvokeList_Testing.hpp"
@@ -53,11 +48,8 @@ TestRunner tester;
 void setup() {
   Serial.begin(9600);
   
-//  pankey_Log_set(Log);
-
   TR_DuoMember_Testing(tester);
   TR_DuoTypeMember_Testing(tester);
-  TR_Function_Testing(tester);
   TR_InvokeCommandList_Testing(tester);
   TR_InvokeCommandMap_Testing(tester);
   TR_InvokeList_Testing(tester);

@@ -129,7 +129,7 @@
 							return;
 						}
 						ObjectLog(pankey_Log_Statement, "create", "creating new instance");
-						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), MemorySize(P), StaticAllocatorInstance<P>::getAllocator());
+						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), MemorySize(P), Base::StaticAllocatorInstance<P>::getAllocator());
 						this->setHolder(i_holder);
 						this->setBaseType(Base::ClassCount<O>::get());
 						ObjectLog(pankey_Log_EndMethod, "create", "");

@@ -27,8 +27,8 @@
 
 					virtual HOLDER_TYPE newHolder(){return nullptr;}
 
-					virtual HOLDER_TYPE newInstance(long a_type, MemoryAllocator* a_allocator){return nullptr;}
-					virtual HOLDER_TYPE newInstance(long a_type, memory_size a_size, MemoryAllocator* a_allocator){return nullptr;}
+					virtual HOLDER_TYPE newInstance(long a_type, Base::MemoryAllocator* a_allocator){return nullptr;}
+					virtual HOLDER_TYPE newInstance(long a_type, Base::memory_size a_size, Base::MemoryAllocator* a_allocator){return nullptr;}
 
 					virtual void setManageableCheck(HOLDER_TYPE& a_holder, bool a_check){}
 					

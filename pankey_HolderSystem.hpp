@@ -33,9 +33,6 @@
 
 	#include "ClassCount.hpp"
 
-	#include "Function.hpp"
-	#include "FreeFunction.hpp"
-
 	// #include "StorageManager.hpp"
 	// #include "PointerArrayStorage.hpp"
 	// #include "PointerArrayStorageAllocator.hpp"
@@ -146,17 +143,6 @@
 
 			template<class T>
 			using type = Base::ClassCount<T>;
-
-			template<class T, class... Args>
-			using function = Object<ClassFunction<T,Args...>,pankey_MEMORY_HOLDER_ALLOCATOR>;
-
-			using Fx = Function<float,pankey_MEMORY_HOLDER_ALLOCATOR,float>;
-			using fx = function<float,float>;
-
-			template<class N>
-			using Fn = Function<N,pankey_MEMORY_HOLDER_ALLOCATOR,N>;
-
-			using FreeFun = FreeFunction<float,float>;
 
 			void createMemoryManager(){
 				createManager<pankey_ENGINE_CREATE_ALLOCATOR()>();

@@ -78,7 +78,7 @@
 						return i_erf;
 					}
 
-					virtual HOLDER_TYPE newInstance(long a_type, MemoryAllocator* a_allocator){
+					virtual HOLDER_TYPE newInstance(long a_type, Base::MemoryAllocator* a_allocator){
 						UniversalManagerLog(pankey_Log_StartMethod, "newInstance", "with void*");
 						UniversalHolder* i_holder =  new UniversalHolder();
 						i_holder->m_allocator = a_allocator;
@@ -90,7 +90,7 @@
 						return i_holder;
 					}
 
-					virtual HOLDER_TYPE newInstance(long a_type, memory_size a_size, MemoryAllocator* a_allocator){
+					virtual HOLDER_TYPE newInstance(long a_type, Base::memory_size a_size, Base::MemoryAllocator* a_allocator){
 						UniversalManagerLog(pankey_Log_StartMethod, "newInstance", "with void*");
 						UniversalHolder* i_holder =  new UniversalHolder();
 						i_holder->m_allocator = a_allocator;

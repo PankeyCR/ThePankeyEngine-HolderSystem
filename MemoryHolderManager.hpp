@@ -89,7 +89,7 @@
                     return a_manager->newHolder();
                 }
                 
-                static HOLDER_TYPE newInstance(MANAGER_TYPE a_manager, long a_type, MemoryAllocator* a_allocator){
+                static HOLDER_TYPE newInstance(MANAGER_TYPE a_manager, long a_type, Base::MemoryAllocator* a_allocator){
                     MemoryHolderManagerLog(pankey_Log_StartMethod, "newInstance", "");
                     if(a_manager == nullptr){
                         MemoryHolderManagerLog(pankey_Log_EndMethod, "newInstance", "m_allocator == nullptr");
@@ -99,7 +99,7 @@
                     return a_manager->newInstance(a_type, a_allocator);
                 }
                 
-                static HOLDER_TYPE newInstance(MANAGER_TYPE a_manager, long a_type, memory_size a_size, MemoryAllocator* a_allocator){
+                static HOLDER_TYPE newInstance(MANAGER_TYPE a_manager, long a_type, Base::memory_size a_size, Base::MemoryAllocator* a_allocator){
                     MemoryHolderManagerLog(pankey_Log_StartMethod, "newInstance", "");
                     if(a_manager == nullptr){
                         MemoryHolderManagerLog(pankey_Log_EndMethod, "newInstance", "m_allocator == nullptr");

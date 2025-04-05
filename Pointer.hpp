@@ -63,7 +63,7 @@
 
 					Pointer(P* a_pointer){
 						PointerLog(pankey_Log_StartMethod, "Contructor", "const Pointer<P,H,M>&");
-						this->m_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), new SimpleMemoryAllocator<P>(a_pointer));
+						this->m_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), new Base::SimpleMemoryAllocator<P>(a_pointer));
 						MemoryHolderManager<H>::add(this->getManager(), this->m_holder);
 						PointerLog(pankey_Log_EndMethod, "Contructor", "");
 					}
@@ -83,7 +83,7 @@
 						if(i_pointer != nullptr){
 							return;
 						}
-						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), MemorySize(P), StaticAllocatorInstance<P>::getAllocator());
+						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), MemorySize(P), Base::StaticAllocatorInstance<P>::getAllocator());
 						this->setHolder(i_holder);
 						this->setBaseType(Base::ClassCount<P>::get());
 						PointerLog(pankey_Log_EndMethod, "create", "");

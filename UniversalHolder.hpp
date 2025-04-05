@@ -9,7 +9,7 @@
 		namespace HolderSystem{
 
 			struct UniversalHolder{
-				MemoryAllocator* m_allocator = nullptr;
+				Base::MemoryAllocator* m_allocator = nullptr;
 				void* m_pointer = nullptr;
 				int m_count = 0;
 				long m_type = -1;

@@ -27,7 +27,7 @@
 
 					Self(SELF_TYPE* a_Self){
 						SelfLog(pankey_Log_StartMethod, "Contructor", "const SELF_TYPE &a_Self");
-						this->m_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), new SelfMemoryAllocator<P>(a_Self));
+						this->m_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), new Base::SelfMemoryAllocator<P>(a_Self));
 						MemoryHolderManager<H>::add(this->getManager(), this->m_holder);
 						MemoryHolderManager<H>::setManageableCheck(this->getManager(), this->m_holder, false);
 						SelfLog(pankey_Log_EndMethod, "Contructor", "");
