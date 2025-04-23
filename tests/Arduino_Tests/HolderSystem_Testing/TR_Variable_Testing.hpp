@@ -15,8 +15,8 @@
 
 		namespace HolderSystem{
 
-			Base::TestResult TR_Variable_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_1(){
+				Base::TestResult<String> result;
 
 				var i_var;
 
@@ -26,8 +26,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_2(){
+				Base::TestResult<String> result;
 
 				var i_var;
 				
@@ -43,8 +43,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_3(){
+				Base::TestResult<String> result;
 
 				var i_var = 15;
 
@@ -56,8 +56,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_4(){
+				Base::TestResult<String> result;
 
 				var i_var = 15;
 				var i_var_2 = i_var;
@@ -70,8 +70,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_5(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_5(){
+				Base::TestResult<String> result;
 
 				pointer<int> i_var;
 				i_var.create();
@@ -87,8 +87,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_6(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_6(){
+				Base::TestResult<String> result;
 
 				val<int> i_var = 15;
 				var i_var_2 = i_var;
@@ -101,8 +101,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_7(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_7(){
+				Base::TestResult<String> result;
 
 				var i_var = 15;
 				data i_data = i_var;
@@ -116,8 +116,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_8(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_8(){
+				Base::TestResult<String> result;
 
 				var i_var = Base::CharArray("var note");
 
@@ -129,8 +129,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Variable_Testing_9(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Variable_Testing_9(){
+				Base::TestResult<String> result;
 
 				var i_var;
 				i_var.create<Base::CharArray>();
@@ -143,7 +143,7 @@
 				return result;
 			}
 
-			void TR_Variable_Testing(Base::TestRunner& a_test_runner){
+			void TR_Variable_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("var Constructor", TR_Variable_Testing_1);

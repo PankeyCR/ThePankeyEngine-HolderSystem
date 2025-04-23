@@ -17,8 +17,8 @@
 				bool operator==(const TR_ObjectArrayMap_Testing_Example& a_ex){return false;}
 			};
 			
-			Base::TestResult TR_ObjectArrayMap_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectArrayMap_Testing_1(){
+				Base::TestResult<String> result;
 
 				OMap<int,int> i_map;
 				
@@ -26,8 +26,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectArrayMap_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectArrayMap_Testing_2(){
+				Base::TestResult<String> result;
 
 				OMap<TR_ObjectArrayMap_Testing_Example,TR_ObjectArrayMap_Testing_Example> i_map;
 
@@ -48,7 +48,7 @@
 				return result;
 			}
 
-			void TR_ObjectArrayMap_Testing(Base::TestRunner& a_test_runner){
+			void TR_ObjectArrayMap_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("ObjectArrayMap Constructor", TR_ObjectArrayMap_Testing_1);

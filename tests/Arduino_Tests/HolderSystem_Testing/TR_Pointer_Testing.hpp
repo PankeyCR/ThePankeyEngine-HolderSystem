@@ -14,8 +14,8 @@
 
 		namespace HolderSystem{
 		
-			Base::TestResult TR_Pointer_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Pointer_Testing_1(){
+				Base::TestResult<String> result;
 
 				pointer<int> i_pointer;
 
@@ -26,8 +26,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Pointer_Testing_2(){
+				Base::TestResult<String> result;
 				
 				pointer<int> i_pointer;
 
@@ -40,8 +40,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Pointer_Testing_3(){
+				Base::TestResult<String> result;
 				
 				pointer<int> i_pointer;
 
@@ -90,8 +90,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Pointer_Testing_4(){
+				Base::TestResult<String> result;
 				
 				pointer<int> i_pointer;
 
@@ -142,8 +142,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_5(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_5(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -168,8 +168,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_6(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_6(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -196,8 +196,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_7(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_7(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -222,8 +222,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_8(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_8(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -250,8 +250,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_9(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_9(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -276,8 +276,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_10(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_10(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer;
 
@@ -304,8 +304,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_11(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_11(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer = new int(15);
 
@@ -318,8 +318,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_Pointer_Testing_12(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_Pointer_Testing_12(){
+				Base::TestResult<String> i_result;
 				
 				pointer<int> i_pointer = new int(15);
 
@@ -334,7 +334,7 @@
 				return i_result;
 			}
 
-			void TR_Pointer_Testing(Base::TestRunner& a_test_runner){
+			void TR_Pointer_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("Pointer Simple Constructor", TR_Pointer_Testing_1);

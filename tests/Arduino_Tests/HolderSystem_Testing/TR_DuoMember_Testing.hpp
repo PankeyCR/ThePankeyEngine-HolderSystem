@@ -14,8 +14,8 @@
 
 		namespace HolderSystem{
 
-			Base::TestResult TR_DuoMember_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_DuoMember_Testing_1(){
+				Base::TestResult<String> result;
 
 				duo i_duo;
 
@@ -31,8 +31,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_DuoMember_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_DuoMember_Testing_2(){
+				Base::TestResult<String> result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -52,8 +52,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_DuoMember_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_DuoMember_Testing_3(){
+				Base::TestResult<String> result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -72,8 +72,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_DuoMember_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DuoMember_Testing_4(){
+				Base::TestResult<String> i_result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -90,7 +90,7 @@
 			}
 			
 
-			void TR_DuoMember_Testing(Base::TestRunner& a_test_runner){
+			void TR_DuoMember_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("duo Constructor", TR_DuoMember_Testing_1);

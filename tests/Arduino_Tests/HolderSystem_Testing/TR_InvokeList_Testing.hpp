@@ -15,17 +15,17 @@
 
 			class TestListInvoker{
 				public:
-				void run(Base::TestResult& a_result){
+				void run(Base::TestResult<String>& a_result){
 					a_result.assertTrue("executing method", true);
 				}
-				bool won(Base::TestResult& a_result){
+				bool won(Base::TestResult<String>& a_result){
 					a_result.assertTrue("executing method", true);
 					return true;
 				}
 			};
 			
-			Base::TestResult TR_InvokeList_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_InvokeList_Testing_1(){
+				Base::TestResult<String> i_result;
 
 				InvokerList<TestListInvoker> i_list;
 
@@ -34,18 +34,18 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_InvokeList_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_InvokeList_Testing_2(){
+				Base::TestResult<String> i_result;
 
 				invoking<TestListInvoker> i_class = TestListInvoker();
 
-				invoke<TestListInvoker,Base::TestResult&>(i_class, &TestListInvoker::run, i_result);
+				invoke<TestListInvoker,Base::TestResult<String>&>(i_class, &TestListInvoker::run, i_result);
 				
 				return i_result;
 			}
 			
-			Base::TestResult TR_InvokeList_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_InvokeList_Testing_3(){
+				Base::TestResult<String> i_result;
 
 				InvokerList<TestListInvoker> i_list;
 
@@ -53,13 +53,13 @@
 
 				i_list.add(i_class);
 
-				invoke<TestListInvoker,Base::TestResult&>(i_list, 0, &TestListInvoker::run, i_result);
+				invoke<TestListInvoker,Base::TestResult<String>&>(i_list, 0, &TestListInvoker::run, i_result);
 				
 				return i_result;
 			}
 			
-			Base::TestResult TR_InvokeList_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_InvokeList_Testing_4(){
+				Base::TestResult<String> i_result;
 
 				InvokerList<TestListInvoker> i_list;
 
@@ -71,12 +71,12 @@
 				i_list.add(i_class_2);
 				i_list.add(i_class_3);
 
-				invokeAll<TestListInvoker,Base::TestResult&>(i_list, &TestListInvoker::run, i_result);
+				invokeAll<TestListInvoker,Base::TestResult<String>&>(i_list, &TestListInvoker::run, i_result);
 				
 				return i_result;
 			}
 
-			void TR_InvokeList_Testing(Base::TestRunner& a_test_runner){
+			void TR_InvokeList_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("List Constructor with no arguments", TR_InvokeList_Testing_1);

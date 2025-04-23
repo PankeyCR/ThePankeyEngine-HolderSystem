@@ -19,8 +19,8 @@
 				int m_num = 0;
 			};
 
-			Base::TestResult TR_Object_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_1(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj;
 
@@ -30,8 +30,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_2(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = Example();
 
@@ -41,8 +41,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_3(){
+				Base::TestResult<String> result;
 
 				var i_var = Example();
 				obj<BaseExample> i_obj = i_var;
@@ -53,8 +53,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_4(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = Example();
 				var i_var = i_obj;
@@ -66,8 +66,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_5(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_5(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = Example();
 				var i_var = i_obj;
@@ -92,8 +92,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_6(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_6(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = Example();
 				obj<BaseExample> i_obj_2;
@@ -107,8 +107,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_7(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_7(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = Example();
 				obj<BaseExample> i_obj_2 = i_obj;
@@ -121,8 +121,8 @@
 				return result;
 			}
 
-			Base::TestResult TR_Object_Testing_8(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Object_Testing_8(){
+				Base::TestResult<String> result;
 
 				obj<BaseExample> i_obj = BaseExample();
 
@@ -132,7 +132,7 @@
 				return result;
 			}
 
-			void TR_Object_Testing(Base::TestRunner& a_test_runner){
+			void TR_Object_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("obj Constructor", TR_Object_Testing_1);

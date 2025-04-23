@@ -30,8 +30,8 @@
 				TestExample(int x){num = x;}
 			};
 			
-			Base::TestResult TR_ObjectList_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_1(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 				
@@ -39,8 +39,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_2(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -63,8 +63,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_3(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -96,8 +96,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_4(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -115,8 +115,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_5(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_5(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -131,8 +131,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_6(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_6(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -147,8 +147,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_7(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_7(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -165,8 +165,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_8(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_8(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -183,8 +183,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_9(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_9(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -203,8 +203,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_10(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_10(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -223,8 +223,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_11(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_11(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -245,8 +245,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_12(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_12(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -267,8 +267,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_13(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_13(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -289,8 +289,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_14(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_14(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -311,8 +311,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_15(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_15(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -339,8 +339,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_16(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_16(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -358,8 +358,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_17(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_17(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -377,8 +377,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_18(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_18(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -405,8 +405,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_19(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_19(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -431,8 +431,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_20(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_20(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -459,8 +459,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_ObjectList_Testing_21(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_ObjectList_Testing_21(){
+				Base::TestResult<String> result;
 
 				OList<BaseTestExample> i_list;
 
@@ -482,7 +482,7 @@
 				return result;
 			}
 
-			void TR_ObjectList_Testing(Base::TestRunner& a_test_runner){
+			void TR_ObjectList_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("OList Constructor", TR_ObjectList_Testing_1);

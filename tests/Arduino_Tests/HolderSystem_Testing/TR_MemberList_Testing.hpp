@@ -15,8 +15,8 @@
 
 		namespace HolderSystem{
 		
-			Base::TestResult TR_MemberList_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberList_Testing_1(){
+				Base::TestResult<String> result;
 
 				List i_list;
 				
@@ -24,8 +24,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberList_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberList_Testing_2(){
+				Base::TestResult<String> result;
 
 				List i_list;
 				
@@ -63,7 +63,7 @@
 				return result;
 			}
 
-			void TR_MemberList_Testing(Base::TestRunner& a_test_runner){
+			void TR_MemberList_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("List Constructor", TR_MemberList_Testing_1);

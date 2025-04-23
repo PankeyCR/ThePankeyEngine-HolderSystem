@@ -15,8 +15,8 @@
 
 		namespace HolderSystem{
 		
-			Base::TestResult TR_MemberArrayMap_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_1(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 				
@@ -24,8 +24,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_2(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -40,8 +40,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_3(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -58,8 +58,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_4(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -82,8 +82,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_5(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_5(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -96,8 +96,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_6(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_6(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -120,8 +120,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_7(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_7(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -145,8 +145,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_8(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_8(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -170,8 +170,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_9(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_9(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -198,8 +198,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_10(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_10(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -226,8 +226,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_11(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_11(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -260,8 +260,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_12(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_12(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -290,8 +290,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_13(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_13(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -320,8 +320,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_14(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_14(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -349,8 +349,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_15(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_15(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -366,8 +366,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_MemberArrayMap_Testing_16(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_MemberArrayMap_Testing_16(){
+				Base::TestResult<String> result;
 
 				Map i_map;
 
@@ -382,7 +382,7 @@
 				return result;
 			}
 
-			void TR_MemberArrayMap_Testing(Base::TestRunner& a_test_runner){
+			void TR_MemberArrayMap_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("MemberArrayMap Constructor", TR_MemberArrayMap_Testing_1);

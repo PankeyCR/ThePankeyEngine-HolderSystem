@@ -14,8 +14,8 @@
 
 		namespace HolderSystem{
 
-			Base::TestResult TR_DuoTypeMember_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_DuoTypeMember_Testing_1(){
+				Base::TestResult<String> result;
 
 				duo_type<int,int> i_duo;
 
@@ -31,8 +31,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_DuoTypeMember_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DuoTypeMember_Testing_2(){
+				Base::TestResult<String> i_result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -53,8 +53,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_DuoTypeMember_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DuoTypeMember_Testing_3(){
+				Base::TestResult<String> i_result;
 
 				var i_var_0 = 15.4f;
 				var i_var_1 = 20.4f;
@@ -74,8 +74,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_DuoTypeMember_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_DuoTypeMember_Testing_4(){
+				Base::TestResult<String> result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -94,8 +94,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_DuoTypeMember_Testing_5(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DuoTypeMember_Testing_5(){
+				Base::TestResult<String> i_result;
 
 				var i_var_0 = 15;
 				var i_var_1 = 20;
@@ -111,7 +111,7 @@
 				return i_result;
 			}
 			
-			void TR_DuoTypeMember_Testing(Base::TestRunner& a_test_runner){
+			void TR_DuoTypeMember_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("duo_type Constructor", TR_DuoTypeMember_Testing_1);

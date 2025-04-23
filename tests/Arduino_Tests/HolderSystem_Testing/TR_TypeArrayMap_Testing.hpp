@@ -11,8 +11,8 @@
 
 		namespace HolderSystem{
 		
-			Base::TestResult TR_TypeArrayMap_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_TypeArrayMap_Testing_1(){
+				Base::TestResult<String> result;
 
 				TMap<int,int> i_map;
 				
@@ -20,8 +20,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_TypeArrayMap_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_TypeArrayMap_Testing_2(){
+				Base::TestResult<String> result;
 
 				TMap<int,int> i_map;
 
@@ -40,8 +40,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_TypeArrayMap_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_TypeArrayMap_Testing_3(){
+				Base::TestResult<String> result;
 
 				TMap<int,int> i_map;
 
@@ -60,7 +60,7 @@
 				return result;
 			}
 
-			void TR_TypeArrayMap_Testing(Base::TestRunner& a_test_runner){
+			void TR_TypeArrayMap_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("TypeArrayMap Constructor", TR_TypeArrayMap_Testing_1);

@@ -13,26 +13,26 @@
 
 		namespace HolderSystem{
 
-			class TestCommandList : Base::Command<Base::TestResult&>{
-				void execute(Base::TestResult& a_result){
+			class TestCommandList : Base::Command<Base::TestResult<String>&>{
+				void execute(Base::TestResult<String>& a_result){
 					a_result.assertTrue("executing method", true);
 				}
 			};
 
-			class TestCommandList_2 : Base::Command<Base::TestResult&>{
-				void execute(Base::TestResult& a_result){
+			class TestCommandList_2 : Base::Command<Base::TestResult<String>&>{
+				void execute(Base::TestResult<String>& a_result){
 					a_result.assertEqual("executing method", 1,1);
 				}
 			};
 
-			class TestCommandListWithError : Base::Command<Base::TestResult&>{
-				void execute(Base::TestResult& a_result){
+			class TestCommandListWithError : Base::Command<Base::TestResult<String>&>{
+				void execute(Base::TestResult<String>& a_result){
 					a_result.assertTrue("executing method with error", false);
 				}
 			};
 			
-			Base::TestResult TR_InvokeCommandList_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_1(){
+				Base::TestResult<String> result;
 
 				CommandList<> i_list;
 
@@ -41,8 +41,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_InvokeCommandList_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_2(){
+				Base::TestResult<String> result;
 
 				CommandList<float> i_list;
 
@@ -51,32 +51,32 @@
 				return result;
 			}
 			
-			Base::TestResult TR_InvokeCommandList_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_3(){
+				Base::TestResult<String> result;
 
-				CommandList<Base::TestResult&> i_list;
+				CommandList<Base::TestResult<String>&> i_list;
 
-				command<Base::TestResult&> i_obj = TestCommandList();
+				command<Base::TestResult<String>&> i_obj = TestCommandList();
 
 				i_list.add(i_obj);
 
-				invoke<Base::TestResult&>(i_list, 0, result);
+				invoke<Base::TestResult<String>&>(i_list, 0, result);
 				
 				return result;
 			}
 			
-			Base::TestResult TR_InvokeCommandList_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_4(){
+				Base::TestResult<String> result;
 
-				CommandList<Base::TestResult&> i_list;
+				CommandList<Base::TestResult<String>&> i_list;
 
-				command<Base::TestResult&> i_obj = TestCommandList();
-				command<Base::TestResult&> i_obj_2 = TestCommandList_2();
+				command<Base::TestResult<String>&> i_obj = TestCommandList();
+				command<Base::TestResult<String>&> i_obj_2 = TestCommandList_2();
 
 				i_list.add(i_obj);
 				i_list.add(i_obj_2);
 
-				invokeAll<Base::TestResult&>(i_list, result);
+				invokeAll<Base::TestResult<String>&>(i_list, result);
 				
 				return result;
 			}
@@ -87,22 +87,22 @@
 				}
 			};
 
-			class TestCommandListReturn_2 : Base::CommandReturn<bool,bool,Base::TestResult&>{
-				bool execute(bool a_bool, Base::TestResult& a_result){
+			class TestCommandListReturn_2 : Base::CommandReturn<bool,bool,Base::TestResult<String>&>{
+				bool execute(bool a_bool, Base::TestResult<String>& a_result){
 					a_result.assertTrue("bool parameter has to be true", a_bool);
 					return a_bool;
 				}
 			};
 
-			class TestCommandListReturn_3 : Base::CommandReturn<bool,bool,Base::TestResult&>{
-				bool execute(bool a_bool, Base::TestResult& a_result){
+			class TestCommandListReturn_3 : Base::CommandReturn<bool,bool,Base::TestResult<String>&>{
+				bool execute(bool a_bool, Base::TestResult<String>& a_result){
 					a_result.assertEqual("bool parameter has to be true", a_bool, true);
 					return a_bool;
 				}
 			};
 
-			Base::TestResult TR_InvokeCommandList_Testing_5(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_5(){
+				Base::TestResult<String> result;
 
 				CommandReturnList<bool,bool> i_list;
 
@@ -115,31 +115,31 @@
 				return result;
 			}
 			
-			Base::TestResult TR_InvokeCommandList_Testing_6(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_InvokeCommandList_Testing_6(){
+				Base::TestResult<String> result;
 
-				CommandReturnList<bool,bool,Base::TestResult&> i_list;
+				CommandReturnList<bool,bool,Base::TestResult<String>&> i_list;
 
-				commandReturn<bool,bool,Base::TestResult&> i_obj = TestCommandListReturn_2();
-				commandReturn<bool,bool,Base::TestResult&> i_obj_2 = TestCommandListReturn_3();
+				commandReturn<bool,bool,Base::TestResult<String>&> i_obj = TestCommandListReturn_2();
+				commandReturn<bool,bool,Base::TestResult<String>&> i_obj_2 = TestCommandListReturn_3();
 
 				i_list.add(i_obj);
 				i_list.add(i_obj_2);
 
-				invokeAll<bool,bool,Base::TestResult&>(i_list, true, result);
+				invokeAll<bool,bool,Base::TestResult<String>&>(i_list, true, result);
 				
 				return result;
 			}
 
-			void TR_InvokeCommandList_Testing(Base::TestRunner& a_test_runner){
+			void TR_InvokeCommandList_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("CommandList Constructor with no arguments", TR_InvokeCommandList_Testing_1);
 				a_test_runner.add("CommandList Constructor with 1 float arguments", TR_InvokeCommandList_Testing_2);
-				a_test_runner.add("CommandList invoke with Base::TestResult& argument", TR_InvokeCommandList_Testing_3);
-				a_test_runner.add("CommandList invokeAll with Base::TestResult& argument", TR_InvokeCommandList_Testing_4);
-				a_test_runner.add("CommandList invoke class with Base::TestResult& argument", TR_InvokeCommandList_Testing_5);
-				a_test_runner.add("CommandList invokeAll class with Base::TestResult& argument", TR_InvokeCommandList_Testing_6);
+				a_test_runner.add("CommandList invoke with Base::TestResult<String>& argument", TR_InvokeCommandList_Testing_3);
+				a_test_runner.add("CommandList invokeAll with Base::TestResult<String>& argument", TR_InvokeCommandList_Testing_4);
+				a_test_runner.add("CommandList invoke class with Base::TestResult<String>& argument", TR_InvokeCommandList_Testing_5);
+				a_test_runner.add("CommandList invokeAll class with Base::TestResult<String>& argument", TR_InvokeCommandList_Testing_6);
 			}
 
 		}

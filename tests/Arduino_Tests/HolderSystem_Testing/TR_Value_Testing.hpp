@@ -15,8 +15,8 @@
 
 		namespace HolderSystem{
 		
-			Base::TestResult TR_Value_Testing_1(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Value_Testing_1(){
+				Base::TestResult<String> result;
 
 				val<int> i_value;
 
@@ -27,8 +27,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Value_Testing_2(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Value_Testing_2(){
+				Base::TestResult<String> result;
 
 				val<int> i_value = 15;
 
@@ -40,8 +40,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Value_Testing_3(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Value_Testing_3(){
+				Base::TestResult<String> result;
 
 				val<int> i_value = 15;
 				val<int> i_value_2 = i_value;
@@ -52,8 +52,8 @@
 				return result;
 			}
 			
-			Base::TestResult TR_Value_Testing_4(){
-				Base::TestResult result;
+			Base::TestResult<String> TR_Value_Testing_4(){
+				Base::TestResult<String> result;
 
 				val<int> i_value = 15;
 				var i_value_2 = i_value;
@@ -64,7 +64,7 @@
 				return result;
 			}
 
-			void TR_Value_Testing(Base::TestRunner& a_test_runner){
+			void TR_Value_Testing(Base::TestRunner<String>& a_test_runner){
 				createMemoryManager();
 
 				a_test_runner.add("Value Simple Constructor", TR_Value_Testing_1);
