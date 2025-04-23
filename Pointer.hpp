@@ -83,7 +83,7 @@
 						if(i_pointer != nullptr){
 							return;
 						}
-						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), MemorySize(P), Base::StaticAllocatorInstance<P>::getAllocator());
+						HOLDER_TYPE i_holder = MemoryHolderManager<H>::newInstance(this->getManager(), Base::ClassCount<P>::get(), sizeof(P), Base::StaticAllocatorInstance<P>::getAllocator());
 						this->setHolder(i_holder);
 						this->setBaseType(Base::ClassCount<P>::get());
 						PointerLog(pankey_Log_EndMethod, "create", "");
