@@ -1,7 +1,20 @@
 
-template<class T>
-void concat(String& a_string, const T& a_add){
-  a_string = a_string + a_add;
+namespace pankey{
+  template<class T>
+  String toString(const T& a_add){
+    return String(a_add);
+  }
+
+  template<class T>
+  String concat(const T& a_add){
+    return String(a_add);
+  }
+
+  template<class T, class... Args>
+  String concat(const T& a_string, const Args&... a_add){
+    String i_string = String(a_string) + concat(a_add...);
+    return i_string;
+  }
 }
 
 #include "TestRunner.hpp"

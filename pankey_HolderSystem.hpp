@@ -97,7 +97,7 @@
 
 			using MAStorage = MemberArrayStorage<pankey_MEMORY_HOLDER_ALLOCATOR>;
 
-			using List = MemberArrayList<pankey_MEMORY_HOLDER_ALLOCATOR>;
+			using MList = MemberArrayList<pankey_MEMORY_HOLDER_ALLOCATOR>;
 
 			template<class P>
 			using TList = TypeList<pankey_ENGINE_POINTER_ALLOCATOR(P)>;

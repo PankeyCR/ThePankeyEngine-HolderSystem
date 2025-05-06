@@ -18,7 +18,7 @@
 			Base::TestResult<String> TR_MemberList_Testing_1(){
 				Base::TestResult<String> result;
 
-				List i_list;
+				MList i_list;
 				
 				result.assertTrue("storage has to be null", i_list.isEmpty());
 				return result;
@@ -27,7 +27,7 @@
 			Base::TestResult<String> TR_MemberList_Testing_2(){
 				Base::TestResult<String> result;
 
-				List i_list;
+				MList i_list;
 				
 				result.assertTrue("storage has to be null", i_list.isEmpty());
 
